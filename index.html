@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow, noarchive">
 <title>TOUCH English · Grammar Path</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -307,6 +309,11 @@ body.lang-bm .zh{display:none!important}
 .langbtn.namego:hover{background:var(--blue-bright);border-color:var(--blue-bright)}
 .nameskip{background:none;border:none;cursor:pointer;padding:10px;font-family:var(--display);font-weight:600;font-size:13px;color:var(--faint)}
 .nameskip:hover{color:var(--blue-bright);text-decoration:underline}
+
+/* ===== Gate Logo v1.0 (append-only) ===== */
+.gatelogo{display:block;margin:0 auto 6px;height:176px;width:auto;max-width:100%;object-fit:contain}
+#langGate .langcard{padding-top:24px}
+#langGate .langcard p.sub{margin-bottom:18px}
 </style>
 </head>
 <body class="lang-en">
@@ -315,7 +322,9 @@ body.lang-bm .zh{display:none!important}
 <!-- LANGUAGE GATE -->
 <div class="langgate" id="langGate">
   <div class="langcard">
-    <div class="candy" style="--fc:var(--blue-bright)"><span class="n">T</span></div>
+    <img class="gatelogo" src="logo.png" alt="TOUCH English logo"
+         onerror="this.style.display='none';document.getElementById('gateFallback').style.display='';">
+    <div class="candy" id="gateFallback" style="--fc:var(--blue-bright);display:none"><span class="n">T</span></div>
     <p class="eyebrow">Language · 语言 · Bahasa</p>
     <h2>Choose your language</h2>
     <p class="sub">请选择语言 · Sila pilih bahasa</p>
